@@ -1,0 +1,11 @@
+@import Sentry;
+(BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [SentrySDK startWithConfigureOptions:^(SentryOptions *options) {
+        options.dsn = @"https://5c3ffe4b01ee0ccbe9c96807a0fc87c6@o4511480556486656.ingest.us.sentry.io/4511525435604992";
+        options.debug = YES; // Enabled debug when first installing is always helpful
+        // Adds IP for users.
+        // For more information, visit: https://docs.sentry.io/platforms/apple/data-management/data-collected/
+        options.sendDefaultPii = YES;
+    }];
+    return YES;
+}

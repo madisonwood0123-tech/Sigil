@@ -1,0 +1,1 @@
+brew install getsentry/tools/sentry-wizard && sentry-wizard -1 ios

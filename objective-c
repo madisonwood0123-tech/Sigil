@@ -1,0 +1,6 @@
+@import Sentry;
+NSError *error = nil;
+[self aMethodThatMightFail:&error]
+if (error) {
+    [SentrySDK captureError:error];
+}

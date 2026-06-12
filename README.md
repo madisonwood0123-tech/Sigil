@@ -1,2 +1,16 @@
 # Sigil
 Ai logo design company 
+install getsentry/tools/sentry-wizard && sentry-wizard -1 ios
+import Sentry
+func application(_ application: UIApplication,
+    didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    SentrySDK.start { options in
+        options.dsn = "https://5c3ffe4b01ee0ccbe9c96807a0fc87c6@o4511480556486656.ingest.us.sentry.io/4511525435604992"
+        options.debug = true // Enabled debug when first installing is always helpful
+        // Adds IP for users.
+        // For more information, visit: https://docs.sentry.io/platforms/apple/data-management/data-collected/
+        options.sendDefaultPii = true
+    }
+    return true
+}
+
